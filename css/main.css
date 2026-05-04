@@ -276,6 +276,39 @@ button:hover {
   padding-top: 1em;
 }
 
+/* --- works --- */
+#works {
+  padding-top: 10em;
+  position: relative;
+  overflow-x: hidden;
+
+  & h2 {
+    text-align: center;
+    color: var(--gray);
+  }
+
+  & .works__img--single {
+    margin: 2em 0;
+
+    &:nth-child(odd) {
+      padding-top: 5em;
+    }
+
+    &:nth-child(3) {
+      margin-top: -5em;
+    }
+  }
+
+  & .works__btn {
+    text-align: center;
+    margin-top: 8em;
+
+    & button {
+      font-size: 1rem;
+    }
+  }
+}
+
 /* --- Responsive Desktop --- */
 @media (min-width: 992px) {
   /* --- header --- */
@@ -368,6 +401,24 @@ button:hover {
       order: 2;
       width: 40%;
       padding-bottom: 0;
+    }
+  }
+
+  /* --- works ---*/
+  #works {
+    & h2 {
+      margin-bottom: 3em;
+    }
+
+    & .works__img {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      & .works__img--single {
+        margin: 0 5em;
+        width: 35%;
+      }
     }
   }
 }
