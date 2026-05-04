@@ -238,6 +238,23 @@ button:hover {
   color: var(--gray);
 }
 
+.things__dec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-60%);
+  z-index: -1;
+
+  &:nth-child(2) {
+    top: initial;
+    left: initial;
+    right: 0;
+    bottom: 15%;
+    transform: translateX(60%);
+    z-index: -1;
+  }
+}
+
 .things__item {
   margin: 3em 0;
 }
@@ -310,5 +327,47 @@ button:hover {
   .banner__btn:hover {
     box-shadow: 0 0 10px var(--gray);
     transition: var(--smooth);
+  }
+
+  /* --- things desktop --- */
+  #things {
+    margin-top: 15em;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .things__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 0;
+
+    & img {
+      width: 40%;
+      padding-bottom: 0;
+    }
+
+    & .things__item--heading {
+      width: 45%;
+      text-align: initial;
+
+      &:nth-child(odd) {
+        order: 1;
+        width: 45%;
+        text-align: initial;
+      }
+
+      & p {
+        margin: 0;
+        max-width: 500px;
+      }
+    }
+
+    &:nth-child(odd) img {
+      order: 2;
+      width: 40%;
+      padding-bottom: 0;
+    }
   }
 }
