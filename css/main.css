@@ -169,35 +169,6 @@ button:hover {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
-/* Responsive */
-@media (min-width: 992px) {
-  .navbar__links {
-    position: initial;
-    transform: translateX(0);
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-  }
-
-  .navbar__link a {
-    color: var(--gray);
-  }
-
-  .navbar__icons {
-    display: none;
-  }
-
-  .navbar__btn {
-    background: var(--gray);
-  }
-  .navbar__btn:hover {
-    box-shadow: 0 0 10px var(--gray);
-    transition: var(--smooth);
-  }
-}
-
 /* --- Banner --- */
 #banner {
   position: relative;
@@ -236,7 +207,7 @@ button:hover {
   font-size: 1rem;
 }
 
-.banner__social {
+.banner__socials {
   margin-top: 3em;
   display: flex;
   align-items: center;
@@ -244,12 +215,66 @@ button:hover {
   font-size: 1.5rem;
 }
 
-.banner__social a {
+.banner__socials a {
   color: var(--gray);
   transition: var(--smooth);
 }
 
-.banner__social a:hover {
+.banner__socials a:hover {
   color: var(--green-l);
   transition: var(--smooth);
+}
+
+/* Responsive Desktop */
+@media (min-width: 992px) {
+  /* --- header --- */
+  .navbar__links {
+    position: initial;
+    transform: translateX(0);
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+  }
+
+  .navbar__link a {
+    color: var(--gray);
+  }
+
+  .navbar__icons {
+    display: none;
+  }
+
+  .navbar__btn {
+    background: var(--gray);
+  }
+  .navbar__btn:hover {
+    box-shadow: 0 0 10px var(--gray);
+    transition: var(--smooth);
+  }
+
+  /* --- Banner Desktop --- */
+  .banner__heading {
+    text-align: initial;
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .banner__socials {
+    justify-content: flex-start;
+
+    & a {
+      margin-right: 45px;
+    }
+  }
+
+  .banner__img {
+    width: 55%;
+  }
+
+  .banner__btn:hover {
+    box-shadow: 0 0 10px var(--gray);
+    transition: var(--smooth);
+  }
 }
