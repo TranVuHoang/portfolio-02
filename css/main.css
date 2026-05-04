@@ -225,7 +225,41 @@ button:hover {
   transition: var(--smooth);
 }
 
-/* Responsive Desktop */
+/* --- things --- */
+#things {
+  position: relative;
+  overflow-x: hidden;
+  margin-top: 5px;
+}
+
+#things h2 {
+  text-align: center;
+  margin-bottom: 3em;
+  color: var(--gray);
+}
+
+.things__item {
+  margin: 3em 0;
+}
+
+.things__item img {
+  padding-bottom: 4em;
+}
+
+.things__item--heading {
+  color: var(--gray);
+  text-align: center;
+}
+
+.things__item--heading p {
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 2em;
+  max-width: 300px;
+  padding-top: 1em;
+}
+
+/* --- Responsive Desktop --- */
 @media (min-width: 992px) {
   /* --- header --- */
   .navbar__links {
