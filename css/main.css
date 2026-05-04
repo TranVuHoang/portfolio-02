@@ -168,3 +168,32 @@ button:hover {
 .open .navbar__icon::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
+
+/* Responsive */
+@media (min-width: 992px) {
+  .navbar__links {
+    position: initial;
+    transform: translateX(0);
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+  }
+
+  .navbar__link a {
+    color: var(--gray);
+  }
+
+  .navbar__icons {
+    display: none;
+  }
+
+  .navbar__btn {
+    background: var(--gray);
+  }
+  .navbar__btn:hover {
+    box-shadow: 0 0 10px var(--gray);
+    transition: var(--smooth);
+  }
+}
