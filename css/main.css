@@ -6,6 +6,165 @@
   box-sizing: border-box;
 }
 
+:root {
+  --green: #54b192;
+  --green-l: #a4cec0;
+  --gray: #3f3d56;
+  --smooth: all 0.3s ease-in;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+button {
+  text-align: center;
+  color: #fff;
+  background: var(--gray);
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: var(--smooth);
+}
+
+button:hover {
+  /* background: var(--green-l); */
+  opacity: 0.8;
+  transition: var(--smooth);
+  box-shadow: 0 0 15px var(--green);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* --- Header --- */
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+/* logo */
+.navbar__img {
+  width: 57px;
+  height: 57px;
+  object-fit: cover;
+}
+
+/* link - menu */
+.navbar__links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: var(--gray);
+  z-index: 5;
+  transition: var(--smooth);
+  /* ẩn menu sang bên trái */
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* hiển thị menu */
+.navbar__links.navbar__open {
+  transform: translateX(0);
+  opacity: 1;
+  transition: var(--smooth);
+}
+
+.navbar__link {
+  padding: 40px;
+  list-style-type: none;
+}
+
+.navbar__link a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  transition: var(--smooth);
+  padding: 10px;
+}
+
+.navbar__link a:hover {
+  color: var(--green);
+  transition: var(--smooth);
+}
+
+.navbar__btn {
+  font-size: 1rem;
+  background: var(--green);
+  margin-left: 45px;
+}
+
+/* ☰ button */
+.navbar__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: var(--smooth);
+  position: relative;
+}
+
+.navbar__icon {
+  position: relative;
+  width: 45px;
+  height: 6px;
+  background: var(--gray);
+  border-radius: 5px;
+  transition: var(--smooth);
+}
+
+.navbar__icon::after,
+.navbar__icon::before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 6px;
+  background: var(--gray);
+  border-radius: 5px;
+  transition: var(--smooth);
+}
+
+.navbar__icon::before {
+  transform: translateY(-12px);
+}
+.navbar__icon::after {
+  transform: translateY(12px);
+}
+
+/*🆇 button animation */
+.open .navbar__icon {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.open .navbar__icon::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.open .navbar__icon::after {
+  transform: rotate(-45deg) translate(35px, 35px);
 }
